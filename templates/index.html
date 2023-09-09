@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bina Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        h1 {
+            font-size: 40px;
+            font-family: Fira Code;
+            font-weight: bold;
+            color: goldenrod;
+            text-align: center;
+        }
+        #Bina {
+            width: 100%;
+            object-fit: cover;
+
+        }
+        h2 {
+            font-family: Fira Code;
+            font-size: 32px;
+            color: grey;
+            text-align: center;
+        }
+        p {
+            font-family: Fira Code;
+            color: rgb(80, 80, 80);
+            text-align: center;
+        }
+        #container {
+            max-width: 720px;
+            margin: auto;
+        }
+        #Button {
+            text-align: center;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p> </p>
+        <h1>{{company_name}} Careers</h1>
+        <img id="Bina" src="http://127.0.0.1:5000/static/bina.jpg" height: 350>
+        <p> </p>
+        <h2>About Bina</h2>
+        <p class="lead">
+            Hi there! I'm Bina, the bunny with big dreams and a fluffy heart. I've hopped my way into the world of entrepreneurship and started a business called "Bina Careers." With my keen sense of curiosity and determination, I'm here to help individuals find their passion and carve their career paths. Together, let's embark on a journey towards success and fulfillment. Join me at Bina Careers, where your dreams take flight! 🐰🌟
+        </p>
+        <h2>Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html'%}
+            {% endfor %}
+        </div>
+        <div id="Button">
+        <button type="button" class="btn btn-warning">Contact Us</button></div>
+        <p>Copyright 2023, Bina</p>
+    </div>
+</body>
+</html>
